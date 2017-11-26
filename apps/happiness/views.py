@@ -38,9 +38,6 @@ def travels(request):
     # {% for test in test1 %}
     # {{test.plannedby.id}}
     # {% endfor %}
-    
-    trip = Trip.objects.joining.get(User = 4)
-    print trip
     context = {
         'users': User.objects.get(id = request.session['user']),
         'trips': user.joinedby.all(),
